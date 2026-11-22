@@ -116,6 +116,89 @@
             border-radius: 10px;
             text-align: center;
         }
+    
+        body.dark-mode {
+            background-color: #121417;
+            color: #e6e8ec;
+        }
+
+        body.dark-mode #gtco-header-navbar {
+            background-color: #181b20 !important;
+            border-bottom: 1px solid #2a2f38;
+        }
+
+        body.dark-mode #gtco-header-navbar .nav-link,
+        body.dark-mode #gtco-header-navbar .navbar-brand,
+        body.dark-mode #gtco-header-navbar .navbar-toggler {
+            color: #e6e8ec !important;
+        }
+
+        body.dark-mode #gtco-features,
+        body.dark-mode .lakas-lista-section,
+        body.dark-mode .bg-white {
+            background-color: #14171c !important;
+            color: #e6e8ec !important;
+        }
+
+        body.dark-mode .videok-section,
+        body.dark-mode .bg-grey {
+            background-color: #191d24 !important;
+            color: #e6e8ec !important;
+            border-top-color: #2a2f38;
+        }
+
+        body.dark-mode .lakas-elem {
+            background-color: #1d2129;
+            border-color: #2e3440;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        body.dark-mode .lakas-felirat {
+            background-color: #1d2129;
+            color: #d6dae0;
+            border-top-color: #2e3440;
+        }
+
+        body.dark-mode .kapcsolat-blokk {
+            background-color: #1d2129;
+            border-color: #2e3440;
+            color: #e6e8ec;
+        }
+
+        body.dark-mode .section-title,
+        body.dark-mode .section-sub-title,
+        body.dark-mode .feature-item h4,
+        body.dark-mode .feature-item p,
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode p,
+        body.dark-mode footer {
+            color: #e6e8ec !important;
+        }
+
+        body.dark-mode .feature-item i,
+        body.dark-mode .lakas-ikon-svg {
+            color: #9bb4ff;
+            stroke: #9bb4ff;
+        }
+
+        body.dark-mode #top.jumbotron {
+        position: relative;
+        background-image:
+            linear-gradient(rgba(10, 12, 16, 0.72), rgba(10, 12, 16, 0.72)),
+            url(img/hero-2.jpg) !important;
+        background-size: cover;
+        background-position: center;
+        color: #eef1f5;
+        }
+
+        body.dark-mode #top.jumbotron h1,
+        body.dark-mode #top.jumbotron p {
+            color: #eef1f5 !important;
+        }
+
     </style>
 
 </head>
@@ -124,7 +207,7 @@
     <div class="boxed-page">
         <nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="/">
+                <a id="dark-mode-toggle" href="#top" class="navbar-brand d-flex align-items-center" title="Sötét mód kapcsolása" aria-label="Sötét mód kapcsolása">
                     <span class="lnr lnr-moon"></span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
@@ -443,6 +526,33 @@
     <script src="vendor/isotope/isotope.min.js"></script>
     <script src="vendor/waypoints/waypoints.min.js"></script>
     <script src="js/app.min.js"></script>
+
+    <script>
+        (function () {
+            const toggles = document.querySelectorAll("#dark-mode-toggle");
+            if (!toggles.length) return;
+
+            // Ha véletlenül több példány is lenne, csak az elsőt hagyjuk láthatóan
+            toggles.forEach((el, index) => {
+                if (index > 0) el.style.display = "none";
+            });
+
+            const btn = toggles[0];
+
+            const savedTheme = localStorage.getItem("dandar_theme");
+            if (savedTheme === "dark") {
+                document.body.classList.add("dark-mode");
+            }
+
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.body.classList.toggle("dark-mode");
+                const isDark = document.body.classList.contains("dark-mode");
+                localStorage.setItem("dandar_theme", isDark ? "dark" : "light");
+            });
+        })();
+    </script>
+
 </body>
 
 </html>
