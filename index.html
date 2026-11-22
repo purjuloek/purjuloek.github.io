@@ -205,6 +205,52 @@
             color: #eef1f5 !important;
         }
 
+        .hirdetes-szekcio {
+            padding: 70px 0;
+            background-color: #ffffff;
+        }
+
+        .hirdetes-kartya {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 32px;
+            background-color: #ffffff;
+            border: 1px solid #e6e8ec;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .hirdetes-elvalaszto {
+            border-top: 1px solid #ececec;
+            margin: 24px 0;
+        }
+
+        .hirdetes-adatok ul {
+            padding-left: 18px;
+        }
+
+        body.dark-mode .hirdetes-szekcio {
+            background-color: #14171c !important;
+            color: #e6e8ec !important;
+        }
+
+        body.dark-mode .hirdetes-kartya {
+            background-color: #1d2129 !important;
+            border-color: #2e3440 !important;
+            color: #e6e8ec !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        body.dark-mode .hirdetes-elvalaszto {
+            border-top-color: #2e3440;
+        }
+
+        body.dark-mode .hirdetes-kartya li,
+        body.dark-mode .hirdetes-kartya strong,
+        body.dark-mode .hirdetes-kartya em {
+            color: #e6e8ec !important;
+        }
+
     </style>
 
 </head>
@@ -229,6 +275,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#gtco-features">Felszereltség</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hirdetes-info">Hirdetés</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#lakas-seta">Képek</a>
@@ -380,6 +429,81 @@
             </div>
         </section>
         <!-- End of Features Section -->
+
+        <section id="hirdetes-info" class="hirdetes-szekcio">
+            <div class="container">
+                <div class="title-wrap mb-5">
+                    <h2 class="section-title">Hirdetés és tudnivalók</h2>
+                    <p class="section-sub-title">Részletes leírás, feltételek és hivatalos hirdetési oldal</p>
+                </div>
+
+                <div class="hirdetes-kartya">
+                    <h3>Lakásleírás</h3>
+                    <p>
+                        Ide jön a részletes hirdetési szöveg: elrendezés, tájolás, fényviszonyok, felújítás tartalma,
+                        konyhai és fürdőszobai felszereltség, tárolási lehetőségek, valamint a lakás hangulata.
+
+                        Kedves albérlet kereső!
+
+                        Kiadásra kínálom a Dandár utcában található 40m2-es, egy szoba + galériás, nagy belmagasságú lakásom.
+
+                        A lakás teljesen felújított, gépesített és berendezett.
+                        A felújítás kiterjedt a konyha, fürdőszoba, hűtés-fűtés rendszerekre, továbbá a vezetékezésre.
+
+                        Az elhelyezkedés kiváló, 
+
+                        A Mester utca felújítása néhány hónapon belül befejeződik, aminek eredményeképp
+
+                        Villamos biztonsági felülvizsgálat 2026-ban készült.
+
+                        A háztartási gépek listája:
+                        Bosch sütő
+                        Bosch mosogatógép
+                        Electrolux főzőlap
+                        Whirlpool mosógép
+                        Sinclair klíma
+
+                        Zárt égésterű (turbós) Saunier Duval kombi kazán.
+
+
+                    </p>
+
+                    <a href="https://bkk.hu/fejlesztesek/kiemelt-fejlesztesek/zoldebb-fenntarthatobb-ilyen-lesz-a-megujulo-mester-utca/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        Mester utca felújítása - megtekintés a BKK oldalán.
+                    </a>
+
+                    <hr class="hirdetes-elvalaszto">
+
+                    <div class="row hirdetes-adatok">
+                        <div class="col-md-6 mb-3">
+                            <strong>Bérleti feltételek:</strong>
+                            <ul class="mb-0 mt-1">
+                                <li>Bérleti díj: <em>[pl. XXX XXX Ft / hó]</em></li>
+                                <li>Kaució: <em>[pl. 2 havi bérleti díj]</em></li>
+                                <li>Költözhető: <em>[pl. azonnal / dátum]</em></li>
+                                <li>Minimum bérleti idő: <em>[pl. 1 év]</em></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <strong>Rezsi és környék:</strong>
+                            <ul class="mb-0 mt-1">
+                                <li>Közös költség: <em>[pl. XX XXX Ft / hó]</em></li>
+                                <li>Fűtés / rezsi: <em>[fogyasztás vagy átalány alapján]</em></li>
+                                <li>Közlekedés: <em>[villamos, metró, busz megállók a közelben]</em></li>
+                                <li>Egyéb: <em>[klíma, kisállat, dohányzásmentes lakás stb.]</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hirdetes-link-sor mt-3">
+                        <a href="https://ingatlan.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            Megtekintés az ingatlan.com-on
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Képes lakás séta -->
         <section id="lakas-seta" class="lakas-lista-section">
