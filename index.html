@@ -116,6 +116,12 @@
             border-radius: 10px;
             text-align: center;
         }
+
+        @media (max-width: 991.98px) {
+            #navbar-nav-header.mob-nyitva {
+                display: block !important;
+            }
+        }
     
         body.dark-mode {
             background-color: #121417;
@@ -482,17 +488,14 @@
                 <div class="lakas-lista">
                     <figure class="lakas-elem">
                         <video src="img/myphotos/bathroom.mov" controls playsinline preload="metadata"></video>
-                        <figcaption class="lakas-felirat">Fürdőszoba (bathroom.mov)</figcaption>
                     </figure>
 
                     <figure class="lakas-elem">
                         <video src="img/myphotos/kitchen.mov" controls playsinline preload="metadata"></video>
-                        <figcaption class="lakas-felirat">Konyha (kitchen.mov)</figcaption>
                     </figure>
 
                     <figure class="lakas-elem">
                         <video src="img/myphotos/living_room.mov" controls playsinline preload="metadata"></video>
-                        <figcaption class="lakas-felirat">Nappali (living_room.mov)</figcaption>
                     </figure>
                 </div>
 
@@ -526,6 +529,33 @@
     <script src="vendor/isotope/isotope.min.js"></script>
     <script src="vendor/waypoints/waypoints.min.js"></script>
     <script src="js/app.min.js"></script>
+
+
+    <script>
+        (function () {
+            const toggler = document.querySelector(".navbar-toggler");
+            const menu = document.getElementById("navbar-nav-header");
+            if (!toggler || !menu) return;
+
+            toggler.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = menu.classList.contains("mob-nyitva");
+                menu.classList.toggle("mob-nyitva", !isOpen);
+                menu.classList.toggle("show", !isOpen);
+                toggler.setAttribute("aria-expanded", String(!isOpen));
+            });
+
+            // Menüpontra kattintva csukjuk be
+            menu.querySelectorAll("a.nav-link").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    menu.classList.remove("mob-nyitva", "show");
+                    toggler.setAttribute("aria-expanded", "false");
+                });
+            });
+        })();
+    </script>
 
     <script>
         (function () {
