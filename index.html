@@ -37,6 +37,33 @@
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Work Sans', sans-serif;
         }
+        #gtco-counter {
+            background-image: url(img/myphotos/07_liv.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        #gtco-counter.overlay::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(20, 24, 33, 0.72);
+            z-index: 0;
+        }
+        #gtco-counter .container {
+            position: relative;
+            z-index: 1;
+        }
+        .lakas-ikon-svg {
+            width: 54px;
+            height: 54px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-bottom: 10px;
+        }
         .lakas-lista-section {
             padding: 60px 0 80px;
             background-color: #ffffff;
@@ -100,6 +127,12 @@
                             <a class="nav-link" href="#top">Kezdőlap</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#gtco-counter">Adatok</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gtco-features">Felszereltség</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#lakas-seta">Lakás séta</a>
                         </li>
                         <li class="nav-item">
@@ -118,6 +151,134 @@
                 </p>
             </div>
         </div>
+
+        <!-- Átlátszó lakásadatok sáv -->
+        <section id="gtco-counter" class="overlay bg-fixed">
+            <div class="container">
+                <div class="section-content">
+                    <div class="row justify-content-center text-center">
+                        <!-- 40 m2 -->
+                        <div class="col-md-4 col-sm-6 counter-item">
+                            <svg class="lakas-ikon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9.5z" />
+                                <path d="M9 21v-6h6v6" />
+                            </svg>
+                            <span class="number">40 m²</span>
+                            <h4>Alapterület</h4>
+                        </div>
+
+                        <!-- 1-2 ember -->
+                        <div class="col-md-4 col-sm-6 counter-item">
+                            <svg class="lakas-ikon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="9" cy="7" r="3" />
+                                <path d="M3 20v-1a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v1" />
+                                <circle cx="17" cy="8" r="2.5" />
+                                <path d="M17 15a3.5 3.5 0 0 1 4 3.5V20" />
+                            </svg>
+                            <span class="number">1–2</span>
+                            <h4>Ember</h4>
+                        </div>
+
+                        <!-- 1-10 kisállat -->
+                        <div class="col-md-4 col-sm-6 counter-item">
+                            <svg class="lakas-ikon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="7" cy="8" r="1.6" />
+                                <circle cx="11" cy="6" r="1.6" />
+                                <circle cx="15" cy="6" r="1.6" />
+                                <circle cx="18.5" cy="9" r="1.6" />
+                                <path d="M12 11.5c-2.8 0-5 2-5 4.3 0 1.6 1.2 2.7 2.8 2.7 1.1 0 1.7-.5 2.2-.5s1.1.5 2.2.5c1.6 0 2.8-1.1 2.8-2.7 0-2.3-2.2-4.3-5-4.3z" />
+                            </svg>
+                            <span class="number">1–10</span>
+                            <h4>Kisállat</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="gtco-features" class="bg-white">
+            <div class="container">
+                <div class="section-content">
+                    <!-- Section Title -->
+                    <div class="title-wrap">
+                        <h2 class="section-title">
+                            Minden <span>kényelem</span>, amire <span>szükséged van</span>
+                        </h2>
+                        <p class="section-sub-title">Azonnal költözhető, igényesen kialakított otthon a Dandár utcában.</p>
+                    </div>
+                    <!-- End of Section Title -->
+                    <div class="row">
+                        <!-- Features Holder -->
+                        <div class="col-md-12 features-holder">
+                            <div class="row">
+                                <!-- Feature Item 1 -->
+                                <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-magic-wand fs-40"></i>
+                                    </div>
+                                    <h4>Teljeskörűen felújított</h4>
+                                    <p>Frissen, modern stílusban felújított terek, új burkolatok és igényes kivitelezés.</p>
+                                </div>
+                                <!-- End of Feature Item -->
+
+                                <!-- Feature Item 2 -->
+                                <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-home fs-40"></i>
+                                    </div>
+                                    <h4>Berendezett</h4>
+                                    <p>Praktikus, kényelmes bútorokkal teljesen berendezve várja új lakóját.</p>
+                                </div>
+                                <!-- End of Feature Item -->
+
+                                <!-- Feature Item 3 -->
+                                <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-cog fs-40"></i>
+                                    </div>
+                                    <h4>Gépesített</h4>
+                                    <p>Mindennapi kényelmet szolgáló háztartási és konyhai gépekkel felszerelve.</p>
+                                </div>
+                                <!-- End of Feature Item -->
+
+                                <!-- Feature Item 4 -->
+                                <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-users fs-40"></i>
+                                    </div>
+                                    <h4>Szimpatikus lakóközösség</h4>
+                                    <p>Nyugodt, barátságos és rendezett társasházi környezet.</p>
+                                </div>
+                                <!-- End of Feature Item -->
+
+                                <!-- Feature Item 5 -->
+                                <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-paw fs-40"></i>
+                                    </div>
+                                    <h4>Állatbarát</h4>
+                                    <p>Kisállattal érkező bérlőket is szívesen látunk a lakásban.</p>
+                                </div>
+                                <!-- End of Feature Item -->
+
+                                <!-- Feature Item 6 -->
+                                <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-sun fs-40"></i>
+                                    </div>
+                                    <h4>Klímás</h4>
+                                    <p>Nyáron is kellemes hőmérsékletet biztosító légkondicionálóval felszerelve.</p>
+                                </div>
+                                <!-- End of Feature Item -->
+                            </div>
+                        </div>
+                        <!-- End of Features Holder -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Features Section -->
 
         <section id="lakas-seta" class="lakas-lista-section">
             <div class="container">
