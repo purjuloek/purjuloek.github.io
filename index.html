@@ -9,7 +9,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dandar 24</title>
+    <title>Dandar utca</title>
     <meta name="description" content="Lakás bemutató - Dandar 24">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,7 +22,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&subset=latin,latin-ext&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
@@ -33,20 +33,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
     <style>
+
         html {
             scroll-behavior: smooth;
         }
-        body, p, a, li, span, div {
-            font-family: 'Lato', sans-serif !important;
+
+        body, p, a, li, div {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 400;
         }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Work Sans', sans-serif !important;
+
+        strong, b {
+            font-family: 'Poppins', sans-serif !important;
+            font-weight: 600;
         }
+
         .lnr,
         [class^="lnr-"],
         [class*=" lnr-"] {
             font-family: 'Linearicons-Free' !important;
         }
+
         #gtco-counter {
             background-image: url(img/myphotos/07_liv.jpg);
             background-size: cover;
@@ -232,6 +239,25 @@
             margin: 24px 0;
         }
 
+        #hirdetes-sav,
+        #hirdetes-sav .container,
+        #hirdetes-sav .section-content,
+        #hirdetes-sav .title-wrap {
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+
+        #hirdetes-sav {
+            position: relative;
+        }
+
+        #hirdetes-sav::before,
+        #hirdetes-sav::after {
+            display: none !important;
+            content: none !important;
+        }
+
         .hirdetes-adatok ul {
             padding-left: 18px;
         }
@@ -359,9 +385,6 @@
                 <div class="section-content">
                     <!-- Section Title -->
                     <div class="title-wrap">
-                        <h2 class="section-title">
-                            Minden <span>kényelem</span>, amire <span>szükséged van</span>
-                        </h2>
                         <p class="section-sub-title">Azonnal költözhető, igényesen kialakított otthon a Dandár utcában.</p>
                     </div>
                     <!-- End of Section Title -->
@@ -436,33 +459,41 @@
             </div>
         </section>
         <!-- End of Features Section -->
+        
+        <section id="hirdetes-sav" class="bg-fixed">
+            <div class="container">
+                <div class="section-content">
+                    <div class="title-wrap text-center mb-0">
+                        <h2 class="section-title text-white">Hirdetés és tudnivalók</h2>
+                        <p class="section-sub-title text-white mb-0">Részletes leírás, feltételek és hivatalos hirdetési oldal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section id="hirdetes-info" class="hirdetes-szekcio">
             <div class="container">
-                <div class="title-wrap mb-5">
-                    <h2 class="section-title">Hirdetés és tudnivalók</h2>
-                    <p class="section-sub-title">Részletes leírás, feltételek és hivatalos hirdetési oldal</p>
-                </div>
 
                 <div class="hirdetes-kartya">
                     <p>
                         <br>Kedves albérlet kereső!<br>
-                        <br>Kiadásra kínálom a Dandár utcában található 40m2-es, egy szoba + galériás, nagy belmagasságú lakásom.<br>
-                        <br>A lakás teljesen felújított, gépesített és berendezett. Jelen állapotában azonnal költözhető.<br>
+                        <br>Kiadásra kínálom a <strong>Dandár utcá</strong>ban található <strong>40m2-es</strong>, <strong>egy szoba + galériá</strong>s, <strong>nagy belmagasság</strong>ú lakásom.<br>
+                        <br>A lakás teljesen <strong>felújított</strong>, <strong>gépesített</strong> és <strong>berendezett</strong>. Jelen állapotában <strong>azonnal költözhető</strong>.<br>
                         <br>A felújítás kiterjedt a konyha, fürdőszoba, hűtés-fűtés rendszerekre, továbbá a vezetékezésre.<br>
-                        <br>A lakás délkeleti tájolású, délelőtt napfényes, szemben nincs magas épület, amely eltakarná a természetes fényt.</br>
-                        <br>Az elhelyezkedés kiváló, a közelben találhatóak:<br>
+                        <br>A lakás délkeleti tájolású, délelőtt <strong>napfényes</strong>, szemben nincs magas épület, amely eltakarná a természetes fényt.</br>
+                        <br>Az <strong>elhelyezkedés kiváló</strong>, a közelben találhatóak:<br>
                         <ul class="mb-0 mt-1">
                                 <li>Duna parti Gizella sétány, Lechner Ödön fasor</li>
                                 <li>Tompa utca, Boráros tér, Ferenc tér, Zwack Péter tér</li>
                                 <li>Unicum ház, Dandár gyógyfürdő</li>
-                                <li>Kávézók (Vaskapu), pékségek (Manfréd), éttermek (És Margarita), kézműves sörözők (Crafty), fittness studio, stb.</li>
-                                <li>DM, 0-24-es SPAR (!), gyógyszertár, Bubbles mosoda, kínai boltok</li>
-                                <li>Kutyafuttató, játszótér, parkok</li>
+                                <li>Kávézók (pl. Vaskapu), pékségek (pl. Manfréd), éttermek (pl. És Margarita), kézműves sörözők (Crafty), fittness studio, stb.</li>
+                                <li>DM, <strong>0-24-es SPAR</strong>(!), gyógyszertár, Bubbles mosoda, kínai boltok</li>
+                                <li><strong>Kutyafuttató</strong>, játszótér, parkok</li>
                         </ul>
                         <br>Közlekedés:<br>
                         <ul class="mb-0 mt-1">
-                                <li>Villamos: 4-6 villamos (nagykörút), 51/51A, 24/23 (Mester utca), 2B villamos (Haller utca), 2-es villamos (Duna mellett)</li>
+                                <li>Villamos: <strong>4-6 villamos</strong> (nagykörút), 51/51A, 24/23 (Mester utca), 2B villamos (Haller utca), 2-es villamos (Duna mellett)</li>
                                 <li>Busz: 23, 51, 54, 55, 223E, 224, 224E, 281, éjszakai 923, 934, 966, 979</li>
                                 <li>HÉV, Metro: H7, 3-as metro (Klinikák állomás 10 perc séta)</li>
                                 <li>Egyéb: Bubi, E-roller, GreenGo, Limo, Wigo zóna stb.</li>
@@ -502,7 +533,7 @@
                                 <li>Bérleti díj: 265 000 Ft / hó</li>
                                 <li>Kaució: 2 havi bérleti díj</li>
                                 <li>Költözhető: azonnal</li>
-                                <li>Minimum bérleti idő: 1 év</li>
+                                <li>Minimum bérlési idő: 1 év</li>
                             </ul>
                         </div>
 
@@ -655,7 +686,7 @@
             <div class="inner container">
                 <div class="row">
                     <div class="col-lg-4 col-md-12 d-flex align-items-center">
-                        <p class="mx-auto text-center mb-0">Dandar 24</p>
+                        <p class="mx-auto text-center mb-0">Dandar</p>
                     </div>
                     <div class="col-lg-4 col-md-12 d-flex align-items-center">
                         <p class="mx-auto text-center mb-0">&copy; Moon Template by GetTemplates.co</p>
