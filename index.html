@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&subset=latin,latin-ext&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
@@ -35,10 +37,15 @@
             scroll-behavior: smooth;
         }
         body, p, a, li, span, div {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Lato', sans-serif !important;
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'Work Sans', sans-serif !important;
+        }
+        .lnr,
+        [class^="lnr-"],
+        [class*=" lnr-"] {
+            font-family: 'Linearicons-Free' !important;
         }
         #gtco-counter {
             background-image: url(img/myphotos/07_liv.jpg);
